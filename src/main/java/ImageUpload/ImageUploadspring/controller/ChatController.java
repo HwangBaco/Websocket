@@ -7,15 +7,26 @@ package ImageUpload.ImageUploadspring.controller;
 
 import ImageUpload.ImageUploadspring.domain.ChatMessage;
 import lombok.RequiredArgsConstructor;
+import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessageSendingOperations;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @RequiredArgsConstructor
 @Controller //해당 클래스가 컨트롤러 역할을 수행함을 나타냄
 public class ChatController {
 
     private final SimpMessageSendingOperations messagingTemplate; //메시지 보내는 기능
+    private final ConcurrentHashMap<Integer, String> imageStore = new ConcurrentHashMap<>();
+    private final AtomicInteger idCounter = new AtomicInteger();
+
 
     @MessageMapping("/chat/message")
     public void message(ChatMessage message) {
@@ -23,5 +34,6 @@ public class ChatController {
             message.setMessage(message.getSender() + "님이 입장하셨습니다.");
         messagingTemplate.convertAndSend("/sub/chat/room/" + message.getRoomId(), message);
     }
+
 }
 

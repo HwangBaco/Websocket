@@ -1,5 +1,9 @@
 package ImageUpload.ImageUploadspring.controller;
 
+import ImageUpload.ImageUploadspring.domain.ChatMessage;
+import lombok.RequiredArgsConstructor;
+import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.simp.SimpMessageSendingOperations;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -9,11 +13,15 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Controller
+@RequiredArgsConstructor
 public class ImageUploadController {
 
     private final AtomicInteger idCounter = new AtomicInteger();
     private final ConcurrentHashMap<Integer, String> imageStore = new ConcurrentHashMap<>();
+    private final SimpMessageSendingOperations messagingTemplate; //메시지 보내는 기능
 
+
+    // 이미지 업로드가 외부 장치와 공유되는 구조가 아님.
     @PostMapping("/uploadImage")
     @ResponseBody
     public int uploadImage(@RequestParam("image") MultipartFile image) {
@@ -34,3 +42,4 @@ public class ImageUploadController {
         return "displayImage";
     }
 }
+
