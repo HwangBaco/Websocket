@@ -1,4 +1,4 @@
-package ImageUpload.ImageUploadspring.controller;
+package study.Websocket.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

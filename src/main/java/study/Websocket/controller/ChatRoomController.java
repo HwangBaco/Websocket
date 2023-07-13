@@ -1,7 +1,7 @@
-package ImageUpload.ImageUploadspring.controller;
+package study.Websocket.controller;
 
-import ImageUpload.ImageUploadspring.domain.ChatRoom;
-import ImageUpload.ImageUploadspring.repository.ChatRoomRepository;
+import study.Websocket.domain.ChatRoom;
+import study.Websocket.repository.ChatRoomRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

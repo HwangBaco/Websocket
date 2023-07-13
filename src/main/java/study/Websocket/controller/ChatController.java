@@ -3,18 +3,13 @@
 클라이언트의 요청을 처리, 필요한 작업 수행하는 역할
  */
 
-package ImageUpload.ImageUploadspring.controller;
+package study.Websocket.controller;
 
-import ImageUpload.ImageUploadspring.domain.ChatMessage;
+import study.Websocket.domain.ChatMessage;
 import lombok.RequiredArgsConstructor;
-import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessageSendingOperations;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;

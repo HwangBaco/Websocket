@@ -1,8 +1,6 @@
-package ImageUpload.ImageUploadspring.controller;
+package study.Websocket.controller;
 
-import ImageUpload.ImageUploadspring.domain.ChatMessage;
 import lombok.RequiredArgsConstructor;
-import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessageSendingOperations;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

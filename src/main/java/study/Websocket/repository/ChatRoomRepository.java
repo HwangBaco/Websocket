@@ -3,10 +3,10 @@
 데이터베이스와의 상호작용 추상화, 도메인 모델과의 연결고리 역할
  */
 
-package ImageUpload.ImageUploadspring.repository;
+package study.Websocket.repository;
 
 
-import ImageUpload.ImageUploadspring.domain.ChatRoom;
+import study.Websocket.domain.ChatRoom;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;

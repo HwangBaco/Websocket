@@ -1,13 +1,13 @@
-package ImageUpload.ImageUploadspring;
+package study.Websocket;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ImageUploadSpringApplication {
+public class WebsocketApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ImageUploadSpringApplication.class, args);
+		SpringApplication.run(WebsocketApplication.class, args);
 	}
 
 

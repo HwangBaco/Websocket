@@ -2,7 +2,7 @@
 config 패키지에서는 애플리케이션(웹소켓 통신)의 설정을 관리, 구성하는 역할
 웹소켓 관련 설정 처리, 프로토콜, 메시지 브로커, 웹소켓 엔드포인드(URL 주소) 등의 설정 구성.
 */
-package ImageUpload.ImageUploadspring.config;
+package study.Websocket.config;
 
 
 import org.springframework.context.annotation.Configuration;

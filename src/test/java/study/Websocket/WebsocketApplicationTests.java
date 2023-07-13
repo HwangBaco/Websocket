@@ -1,10 +1,10 @@
-package ImageUpload.ImageUploadspring;
+package study.Websocket;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ImageUploadSpringApplicationTests {
+class WebsocketApplicationTests {
 
 	@Test
 	void contextLoads() {

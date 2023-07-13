@@ -1,4 +1,4 @@
-package ImageUpload.ImageUploadspring.domain;
+package study.Websocket.domain;
 
 
 import lombok.Getter;
